@@ -1,3 +1,5 @@
+const ionIconArray = ["heart-outline","chatbubble-outline","paper-plane-outline"];
+
 const postArray = [
   {nome:"meowed", conteudo:"gato-telefone", curtida:"respondeai", likes:"101.523"},
   {nome:"barked", conteudo:"dog", curtida:"adorable_animals", likes:"99.159"}
@@ -5,10 +7,10 @@ const postArray = [
 
 export default function Posts() {
     return (
-        <div class="posts">
-          {postArray.map(post)}
-        </div>
-        );
+      <div class="posts">
+        {postArray.map(post)}
+      </div>
+    );
 }
 
 function post(objeto) {
@@ -44,13 +46,12 @@ function Conteudo(props) {
 }
 
 function Fundo(props) {
+  
   return (
     <div class="fundo">
       <div class="acoes">
         <div>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="chatbubble-outline"></ion-icon>
-          <ion-icon name="paper-plane-outline"></ion-icon>
+          {ionIconArray.map(icon => <ion-icon name={icon}></ion-icon>)}
         </div>
         <div>
           <ion-icon name="bookmark-outline"></ion-icon>

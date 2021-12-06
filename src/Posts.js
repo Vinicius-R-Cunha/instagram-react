@@ -13,22 +13,22 @@ export default function Posts() {
     );
 }
 
-function post(objeto) {
+function post({ nome, conteudo, curtida, likes }) {
   return (
     <div class="post">
-      <Topo nome={objeto.nome} />
-      <Conteudo conteudo={objeto.conteudo} />
-      <Fundo curtida={objeto.curtida} likes={objeto.likes} />
+      <Topo nome={nome} />
+      <Conteudo conteudo={conteudo} />
+      <Fundo curtida={curtida} likes={likes} />
     </div>
   );
 }
 
-function Topo(props) {
+function Topo({ nome }) {
   return (
     <div class="topo">
       <div class="usuario">
-        <img src={`assets/img/${props.nome}.svg`} />
-        {props.nome}
+        <img src={`assets/img/${nome}.svg`} />
+        {nome}
       </div>
       <div class="acoes">
         <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -37,15 +37,15 @@ function Topo(props) {
   );
 }
 
-function Conteudo(props) {
+function Conteudo({ conteudo }) {
   return (
     <div class="conteudo">
-      <img src={`assets/img/${props.conteudo}.svg`} />
+      <img src={`assets/img/${conteudo}.svg`} />
     </div>
   );
 }
 
-function Fundo(props) {
+function Fundo({ curtida, likes }) {
   
   return (
     <div class="fundo">
@@ -59,9 +59,9 @@ function Fundo(props) {
       </div>
 
       <div class="curtidas">
-        <img src={`assets/img/${props.curtida}.svg`} />
+        <img src={`assets/img/${curtida}.svg`} />
         <div class="texto">
-          Curtido por <strong>{props.curtida}</strong> e <strong>outras {props.likes} pessoas</strong>
+          Curtido por <strong>{curtida}</strong> e <strong>outras {likes} pessoas</strong>
         </div>
       </div>
     </div>

@@ -28,14 +28,14 @@ export default function Sugestoes() {
     );
 }
   
-function sugestao(objeto) {
+function sugestao({ nome, razao }) {
     return (
       <div class="sugestao">
         <div class="usuario">
-          <img src={`assets/img/${objeto.nome}.svg`} />
+          <img src={`assets/img/${nome}.svg`} />
           <div class="texto">
-            <div class="nome">{objeto.nome}</div>
-            <div class="razao">{objeto.razao}</div>
+            <div class="nome">{nome}</div>
+            <div class="razao">{razao}</div>
           </div>
         </div>
   

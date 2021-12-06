@@ -1,10 +1,10 @@
-export default function Usuario(props) {
+export default function Usuario({ usuario, nome }) {
     return (
       <div class="usuario">
-        <img src={`assets/img/${props.usuario}.svg`} />
+        <img src={`assets/img/${usuario}.svg`} />
         <div class="texto">
-          <strong>{props.usuario}</strong>
-          {props.nome}
+          <strong>{usuario}</strong>
+          {nome}
         </div>
       </div>
     );
